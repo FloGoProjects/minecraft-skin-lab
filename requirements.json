@@ -1,0 +1,49 @@
+{
+  "project": "Minecraft Skin-Editor",
+  "status": "v0.1 - erster Test",
+  "delivery": [
+    { "id": "D1", "text": "Eine einzige HTML-Datei (dist/SkinEditor.html), offline lauffähig, three.js eingebettet." },
+    { "id": "D2", "text": "Nur Desktop (Maus + Tastatur). UI-Sprache Deutsch." }
+  ],
+  "format": [
+    { "id": "F1", "text": "Auflösung beim Projektstart wählbar: 64x64 (Java + Bedrock) oder 128x128 (nur Bedrock)." },
+    { "id": "F2", "text": "Modelle Classic (Arme 4 px) und Slim (Arme 3 px), beim Projektstart wählbar." },
+    { "id": "F3", "text": "Alpha nur 0 oder 255 (beim Malen); importierte Teil-/Skin-PNGs werden bei 50 % geschwellt." },
+    { "id": "F4", "text": "Unbenutzte Texturbereiche bleiben transparent." }
+  ],
+  "layers": [
+    { "id": "L1", "text": "Ebenen-Stapel: oben liegende Ebene überschreibt deckende Pixel darunter." },
+    { "id": "L2", "text": "Ebenen: neu, löschen, umbenennen, ein-/ausblenden, Reihenfolge ändern, aktive Ebene wählen." },
+    { "id": "L3", "text": "Eine Ebene ist eine freie Pixelmaske über die ganze Textur (untere UND obere Schicht), keine feste Körperzone." },
+    { "id": "L4", "text": "Kein Clear-Knopf (Ebenen ersetzen ihn)." }
+  ],
+  "parts": [
+    { "id": "P1", "text": "Ebene als Teil speichern = PNG in Projektauflösung mit Metadaten (Name, Kategorie, Modell, Auflösung) in tEXt-Chunk." },
+    { "id": "P2", "text": "Kategorien sind nur Etiketten: Unten: Schuhe, Hose, T-Shirt, Kopf. Oben: Schuhe, Hose, Oberteil, Kopf. Plus Sonstiges." },
+    { "id": "P3", "text": "Mehrere Teile auf einmal laden (Mehrfachauswahl, Drag & Drop); jedes wird neue Ebene oben im Stapel." },
+    { "id": "P4", "text": "Teil mit kleinerer Auflösung wird verlustfrei hochskaliert; größere wird mit Meldung herunterskaliert." },
+    { "id": "P5", "text": "Warnung, wenn Teil-Modell (Classic/Slim) nicht zum Projekt passt UND das Teil Pixel in den Armbereichen hat." },
+    { "id": "P6", "text": "PNG ohne Metadaten (normaler Skin) wird als Ebene importiert." }
+  ],
+  "project_io": [
+    { "id": "S1", "text": "Projektdatei .skinproj (JSON mit allen Ebenen, Reihenfolge, Einstellungen) speichern/laden." },
+    { "id": "S2", "text": "Autosave des letzten Stands im Browser (Absturzschutz)." },
+    { "id": "S3", "text": "Fertigen Skin als PNG exportieren." },
+    { "id": "S4", "text": "Vor Export: Lücken in der unteren Schicht melden; Knopf 'Lücken füllen' mit wählbarer Standardfarbe (legt Füll-Ebene ganz unten an)." },
+    { "id": "S5", "text": "Neues Projekt startet mit Grund-Ebene in Standardfarbe." }
+  ],
+  "painting": [
+    { "id": "T1", "text": "Malen direkt auf dem 3D-Modell; Ziel umschaltbar: untere oder obere Schicht." },
+    { "id": "T2", "text": "Werkzeuge: Stift, Radierer, Pipette, Füllen (begrenzt auf die Fläche), Farbwähler." },
+    { "id": "T3", "text": "Rückgängig/Wiederholen (Strg+Z / Strg+Y)." },
+    { "id": "T4", "text": "Spiegeln links/rechts (Arme, Beine, Kopf, Körper)." },
+    { "id": "T5", "text": "Ein-/Ausblenden: obere Schicht, untere Schicht, einzelne Körperteile." },
+    { "id": "T6", "text": "Kleine 2D-Vorschau der Textur (nur Anzeige)." },
+    { "id": "T7", "text": "Modell drehen (Ziehen außerhalb des Modells / rechte Maustaste), zoomen (Mausrad)." }
+  ],
+  "look": [
+    { "id": "V1", "text": "Hypermodern/futuristisch: Glas-Panels, Neon-Akzente, HUD-Stil." },
+    { "id": "V2", "text": "Hintergrund: eigene prozedurale Blockwelt in 3D (keine Mojang-Assets)." },
+    { "id": "V3", "text": "Optional eigenes Hintergrundbild laden (nur lokal im Browser gemerkt)." }
+  ]
+}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skin Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<!--STYLE-->
+</head>
+<body>
+<div id="viewport"></div>
+<div class="vignette"></div>
+
+<header class="topbar glass">
+  <div class="brand"><span class="logo"></span><span class="b1">SKIN</span><span class="b2">LAB</span></div>
+  <div class="chip" id="projInfo">64×64 · Classic</div>
+  <nav>
+    <button class="btn" data-act="new" title="Neues Projekt">Neu</button>
+    <button class="btn" data-act="open" title="Projektdatei öffnen">Öffnen</button>
+    <button class="btn" data-act="save" title="Projekt speichern (Strg+S)">Speichern</button>
+    <span class="sep"></span>
+    <button class="btn" data-act="import" title="Fertigen Skin als Ebene importieren">Skin importieren</button>
+    <button class="btn primary" data-act="export" title="Fertigen Skin als PNG exportieren">Skin exportieren</button>
+    <button class="btn icon" data-act="settings" title="Einstellungen" data-icon="gear"></button>
+  </nav>
+</header>
+
+<div class="target glass" id="targetSwitch">
+  <button data-target="inner" class="on">Untere Schicht</button>
+  <button data-target="outer">Obere Schicht</button>
+  <span class="glider"></span>
+</div>
+
+<aside class="tools glass">
+  <button class="tool on" data-tool="pencil" title="Stift (B)" data-icon="pencil"></button>
+  <button class="tool" data-tool="eraser" title="Radierer (E)" data-icon="eraser"></button>
+  <button class="tool" data-tool="picker" title="Pipette (I, oder Alt gedrückt halten)" data-icon="picker"></button>
+  <button class="tool" data-tool="fill" title="Füllen – bleibt in der Fläche (G)" data-icon="fill"></button>
+  <hr>
+  <button class="tool toggle" id="mirrorBtn" title="Spiegeln links/rechts (M)" data-icon="mirror"></button>
+  <hr>
+  <button class="tool" id="undoBtn" title="Rückgängig (Strg+Z)" data-icon="undo"></button>
+  <button class="tool" id="redoBtn" title="Wiederholen (Strg+Y)" data-icon="redo"></button>
+  <hr>
+  <label class="swatch" title="Farbe wählen"><input type="color" id="colorInput" value="#3cf0ff"><span id="swatchFill"></span></label>
+  <input class="hex" id="hexInput" value="#3cf0ff" maxlength="7" spellcheck="false">
+  <div class="palette" id="palette"></div>
+  <div class="recent-label">Zuletzt</div>
+  <div class="palette" id="recent"></div>
+</aside>
+
+<aside class="layers glass">
+  <div class="panel-head"><h2>Ebenen</h2><span class="hint">oben = sichtbar vorne</span></div>
+  <ul id="layerList"></ul>
+  <div class="layer-actions">
+    <button class="btn" id="addLayer" data-icon="plus">Neue Ebene</button>
+    <button class="btn" id="loadParts" data-icon="upload">Teile laden</button>
+  </div>
+  <p class="drop-note">PNG-Teile auch per Drag &amp; Drop · zuletzt geladen = ganz oben</p>
+</aside>
+
+<div class="viewbar glass">
+  <div class="group" id="partToggles"></div>
+  <span class="vsep"></span>
+  <div class="group">
+    <button class="pill on" id="showInner" title="Untere Schicht anzeigen">Unten</button>
+    <button class="pill on" id="showOuter" title="Obere Schicht anzeigen">Oben</button>
+    <button class="pill on" id="gridBtn" title="Pixelraster">Raster</button>
+    <button class="pill" id="camBtn" title="Kamera zurücksetzen">⟲</button>
+  </div>
+  <div class="hover-info" id="hoverInfo">Linke Maus auf Figur = malen · daneben ziehen / rechte Maus = drehen · Rad = Zoom</div>
+</div>
+
+<div class="preview glass" id="preview">
+  <div class="panel-head"><h2>Textur</h2><button class="mini" id="previewToggle" title="Vorschau ein-/ausklappen">–</button></div>
+  <canvas id="previewCanvas" width="128" height="128"></canvas>
+</div>
+
+<div id="toasts"></div>
+<div id="modalRoot"></div>
+<div id="dropHint"><div>PNG-Teile oder .skinproj hier ablegen</div></div>
+<input type="file" id="filePng" accept=".png,image/png" multiple hidden>
+<input type="file" id="fileSkin" accept=".png,image/png" hidden>
+<input type="file" id="fileProj" accept=".skinproj,.json" hidden>
+<input type="file" id="fileBg" accept="image/*" hidden>
+<!--SCRIPT-->
+</body>
+</html>
