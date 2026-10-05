@@ -44,5 +44,8 @@ npm run serve     # liefert dist/ auf http://localhost:5178
 Aufbau: `src/core/` enthält die DOM-freie Logik (UV-Layout, Ebenen, PNG-Metadaten …) und ist getestet,
 `src/ui/` die 3D-Ansicht (three.js), `src/main.js` die Oberfläche. Details in `CLAUDE.md`.
 
+## Lizenz
+MIT, siehe [LICENSE](LICENSE). three.js ist ebenfalls MIT-lizenziert.
+
 ---
 Kein offizielles Minecraft-Produkt. Nicht von Mojang oder Microsoft genehmigt oder mit ihnen verbunden.
