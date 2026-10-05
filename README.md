@@ -18,8 +18,8 @@ Funktioniert offline, braucht keine Installation.
 ## Benutzen
 **Direkt im Browser:** https://flogoprojects.github.io/minecraft-skin-lab/
 
-**Offline:** Auf der Seite oben mit Strg+S speichern oder
-[`SkinEditor.html`](https://flogoprojects.github.io/minecraft-skin-lab/SkinEditor.html) herunterladen und doppelklicken.
+**Offline:** [`SkinEditor.html`](https://flogoprojects.github.io/minecraft-skin-lab/SkinEditor.html) per Rechtsklick
+→ „Link speichern unter…“ herunterladen und doppelklicken. Die Datei enthält alles und läuft ohne Internet.
 Den exportierten Skin lädst du wie gewohnt im Minecraft-Launcher bzw. im Bedrock-Character-Creator hoch.
 
 | Taste | Funktion |
