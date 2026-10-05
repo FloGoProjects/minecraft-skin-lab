@@ -16,7 +16,10 @@ Funktioniert offline, braucht keine Installation.
 - Hintergrund: selbst erzeugte Blockwelt (keine Mojang-Grafiken) oder ein eigenes Bild
 
 ## Benutzen
-`SkinEditor.html` aus den Releases herunterladen (oder selbst bauen, siehe unten) und im Browser öffnen.
+**Direkt im Browser:** https://flogoprojects.github.io/minecraft-skin-lab/
+
+**Offline:** Auf der Seite oben mit Strg+S speichern oder
+[`SkinEditor.html`](https://flogoprojects.github.io/minecraft-skin-lab/SkinEditor.html) herunterladen und doppelklicken.
 Den exportierten Skin lädst du wie gewohnt im Minecraft-Launcher bzw. im Bedrock-Character-Creator hoch.
 
 | Taste | Funktion |
